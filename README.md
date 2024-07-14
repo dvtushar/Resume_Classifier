@@ -52,26 +52,32 @@ To run the Streamlit web application:
 3. **Upload a PDF Resume:**:
    Open your browser and go to http://localhost:8501, upload a PDF resume, and view the predicted job category.
 
-## Project Structure
-resume-classifier/
-│
-├── app.py                # Streamlit web application
-├── requirements.txt      # Required packages
-├── archieve/
-│   ├── Data          # Data cleaning and manipulation files
-│   ├── Model         # Model training and evaluation files 
-│  
-| bert_model      # Directory containing the fine-tuned BERT model
-│
-└── README.md             # Project documentation
+## Model Training and Evaluation
 
-## Model Training
 The model training process involves the following steps:
 1. **Data Preparation:**:
 - Convert PDFs to text using the PyPDF2 library.
 - Tokenize the text data and categorize it into the 22 predefined job categories.
 2. **Fine-tuning BERT:**:
 - Use Hugging Face's Transformers library to fine-tune the BERT model on the dataset.
+- Utilize AdamW optimizer and a learning rate scheduler.
+3. **Training Loop:**:
+- Train the model for 3 epochs with gradient accumulation.
+- Evaluate the model on validation and test datasets.
+
+## Results:
+The model achieved the following performance metrics:
+- Validation Accuracy: 0.7882037533512064
+- Validation F1 Score: 0.79
+- Test Accuracy: 0.7828418230563002
+- Test F1 Score:  0.78
+  ![image](https://github.com/user-attachments/assets/13d199a1-ca45-4339-bcf1-b819b43bd59a)
+  ![image](https://github.com/user-attachments/assets/3ed70b1d-d13c-4340-bf09-0efe33d4cdcf)
+  ![image](https://github.com/user-attachments/assets/6235fe0f-c2ac-4d3a-991e-864849e9ee40)
+
+
+
+
 
 ## Streamlit Web Application
 The Streamlit web application (app.py) allows users to upload resumes and get predictions for job categories.
