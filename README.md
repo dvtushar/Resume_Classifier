@@ -32,3 +32,50 @@ Follow these steps to set up the project locally:
    ```bash
    git clone https://github.com/dvtushar/Resume-Classifier.git
    cd resume-classifier
+2. **Create a virtual environment:**:
+    ```bash
+    python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+3. **Install the required packages:**:
+     ```bash
+    pip install -r requirements.txt
+
+## Usage
+To run the Streamlit web application:
+
+1. **Activate the virtual environment:**:
+   ```bash
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
+2. **Start the Streamlit application:**:
+   ```bash
+   streamlit run app.py --server.enableXsrfProtection false
+3. **Upload a PDF Resume:**:
+   Open your browser and go to http://localhost:8501, upload a PDF resume, and view the predicted job category.
+
+## Project Structure
+resume-classifier/
+│
+├── app.py                # Streamlit web application
+├── requirements.txt      # Required packages
+├── archieve/
+│   ├── Data          # Data cleaning and manipulation files
+│   ├── Model         # Model training and evaluation files 
+│  
+| bert_model      # Directory containing the fine-tuned BERT model
+│
+└── README.md             # Project documentation
+
+## Model Training
+The model training process involves the following steps:
+1. **Data Preparation:**:
+- Convert PDFs to text using the PyPDF2 library.
+- Tokenize the text data and categorize it into the 22 predefined job categories.
+2. **Fine-tuning BERT:**:
+- Use Hugging Face's Transformers library to fine-tune the BERT model on the dataset.
+
+## Streamlit Web Application
+The Streamlit web application (app.py) allows users to upload resumes and get predictions for job categories.
+
+## Screenshot of the working application
+
+
