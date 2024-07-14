@@ -1,5 +1,4 @@
 # Resume Classifier
-
 This project involves the development of a resume classification system using a fine-tuned BERT model. The model classifies resumes into predefined job categories and is trained on a dataset of 2400+ resumes. The project also includes a web application for uploading resumes in PDF format and predicting the job category using Streamlit.
 
 ## Table of Contents
@@ -7,11 +6,7 @@ This project involves the development of a resume classification system using a 
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Model Training](#model-training)
-- [Streamlit Web Application](#streamlit-web-application)
-- [Contributing](#contributing)
-- [License](#license)
+- [Model Training and Evaluation](#Model Training and Evaluation)
 
 ## Introduction
 
@@ -57,13 +52,16 @@ To run the Streamlit web application:
 The model training process involves the following steps:
 1. **Data Preparation:**:
 - Convert PDFs to text using the PyPDF2 library.
-- Tokenize the text data and categorize it into the 22 predefined job categories.
+- Encode job categories using a label encoder.
+- Tokenize the text data using BERT tokenizer.
 2. **Fine-tuning BERT:**:
 - Use Hugging Face's Transformers library to fine-tune the BERT model on the dataset.
 - Utilize AdamW optimizer and a learning rate scheduler.
 3. **Training Loop:**:
 - Train the model for 3 epochs with gradient accumulation.
 - Evaluate the model on validation and test datasets.
+
+
 
 ## Results:
 The model achieved the following performance metrics:
