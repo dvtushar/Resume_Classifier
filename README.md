@@ -75,13 +75,12 @@ The model achieved the following performance metrics:
   ![image](https://github.com/user-attachments/assets/3ed70b1d-d13c-4340-bf09-0efe33d4cdcf)
   ![image](https://github.com/user-attachments/assets/6235fe0f-c2ac-4d3a-991e-864849e9ee40)
 
-
-
-
-
-## Streamlit Web Application
 The Streamlit web application (app.py) allows users to upload resumes and get predictions for job categories.
 
 ## Screenshot of the working application
+The Streamlit web application (app.py) allows users to upload resumes and get predictions for job categories.
+![image](https://github.com/user-attachments/assets/568748f1-46a3-498e-bc67-ee433f13d94f)
+![image](https://github.com/user-attachments/assets/31b90dda-9b73-4fd4-a238-1c48acdf5549)
+
 
 
