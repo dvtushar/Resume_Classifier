@@ -6,7 +6,8 @@ This project involves the development of a resume classification system using a 
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Model Training and Evaluation](#Model Training and Evaluation)
+- [Model Training]
+
 
 ## Introduction
 
